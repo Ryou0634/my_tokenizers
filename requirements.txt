@@ -1,0 +1,5 @@
+mojimoji
+tqdm
+mosestokenizer
+kytea # you still need download and build KyTea
+mecab-python3
