@@ -51,7 +51,7 @@ class JapaneseTokenizer:
         if self.tokenizer == 'kytea':
             return list(self.tagger.getWS(text))
         elif self.tokenizer == 'mecab':
-            return self.tagger.parse(text).replace('\n', '').split()
+            return self.tagger.parse(text).strip().split()
 
 
 def main():

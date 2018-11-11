@@ -6,12 +6,21 @@ class TokenizerBase():
         self.lower = lower
 
     def __call__(self, text):
+        '''
+        Prameters
+        ---------
+        text : str
+
+        Return
+        ------
+        tokenized : List[str]
+        '''
         # lower
         if self.lower:
             text = text.lower()
         # moses tokenizer
-        text = self.tokenizer(text)
-        return text
+        tokenized = self.tokenizer(text)
+        return tokenized
 
 
 class EnglishTokenizer(TokenizerBase):
